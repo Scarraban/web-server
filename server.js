@@ -13,8 +13,10 @@ var middleware = {
 	}
 };
 
+// INIT THE LOGGER
 app.use(middleware.logger);
 
+// ABOUT PAGE
 app.get('/about', middleware.requireAuthentication, function(req, res) {
 	res.send('About Us');
 });
